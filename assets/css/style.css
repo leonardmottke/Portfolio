@@ -435,6 +435,11 @@ footer nav.Impressum a:hover {
   display: none;
 }
 
+.slidshow {
+  display: flex;
+  justify-content: center;
+}
+
 /* Bilder absolut positioniert, deckend */
 .meinSlider .Slid {
   position: absolute;
