@@ -1,0 +1,685 @@
+/* Schriftart */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Seitenstile */
+.wrapper > main,
+#pg-nav {
+  /* Setzt die Breite auf 1200px und zentriert den Inhalt */
+  width: 1200px;
+  margin: 0 auto;
+}
+
+h1,
+h2 {
+  /* Abstand nach unten für Überschriften */
+  margin-bottom: 20px;
+}
+
+p {
+  /* Abstand nach unten für Absätze */
+  margin-bottom: 10px;
+}
+
+p:last-child {
+  /* Entfernt den unteren Abstand beim letzten Absatz */
+  margin: 0;
+}
+
+/* Navigation */
+#pg-nav {
+  /* Zentriert den Text in der Navigation und entfernt Unterstreichungen bei Links */
+  text-align: center;
+  text-decoration: none;
+}
+
+#pg-nav > ul,
+.sub-list ul {
+  /* Entfernt die Standard-Aufzählungspunkte bei Listen */
+  list-style: none;
+}
+
+#pg-nav > ul {
+  /* Verwendet ein Grid-Layout mit vier Spalten in der Navigation */
+  display: grid;
+  grid-template-areas: ". . . .";
+  grid-gap: 30px;
+  padding: 0;
+}
+
+#pg-nav > ul li a,
+.sub-list > ul li a {
+  /* Setzt die Textfarbe und Schriftgröße für Navigationslinks */
+  color: #fafafa;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+#pg-nav > ul li,
+.sub-list ul li {
+  /* Fügt Abstand oben und unten für Listenelemente hinzu */
+  padding: 20px 0;
+}
+
+.sub-list {
+  /* Setzt den Hintergrund der Unterlisten und versteckt sie standardmäßig */
+  background-color: #a2a2a2;
+  display: none;
+  position: absolute;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.dropdown {
+  /* Setzt das Positionierungsverhalten für Dropdown-Menüs */
+  position: relative;
+  z-index: 100;
+}
+
+.dropdown:hover > .sub-list {
+  /* Zeigt die Unterliste an, wenn das Dropdown-Menü angeklickt wird */
+  display: block;
+}
+
+/* Hamburger-Menü aus Tut 9 SEM 1 */
+#hamburger {
+  /* Standardmäßig verborgenes Hamburger-Menü für mobile Ansichten */
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  position: relative;
+  overflow: visible;
+}
+
+#hamburger .hamburger-inner,
+#hamburger .hamburger-inner::after,
+#hamburger .hamburger-inner::before {
+  /* Stile für die Linien im Hamburger-Menü */
+  background-color: #fafafa;
+  border-radius: 4px;
+  width: inherit;
+  height: 4px;
+  position: absolute;
+}
+
+#hamburger .hamburger-inner::after,
+#hamburger .hamburger-inner::before {
+  /* Erstellt die oberen und unteren Linien des Hamburger-Menüs */
+  display: block;
+  content: "";
+}
+
+#hamburger .hamburger-inner::before {
+  /* Positioniert die obere Linie */
+  top: -10px;
+}
+
+#hamburger .hamburger-inner::after {
+  /* Positioniert die untere Linie */
+  bottom: -10px;
+}
+
+#hamburger.active .hamburger-inner {
+  /* Dreht die mittlere Linie bei aktivem Hamburger-Menü */
+  transform: rotate(45deg);
+}
+
+#hamburger.active .hamburger-inner::before {
+  /* Versteckt die obere Linie bei aktivem Hamburger-Menü */
+  top: 0;
+  opacity: 0;
+}
+
+#hamburger.active .hamburger-inner::after {
+  /* Dreht die untere Linie bei aktivem Hamburger-Menü */
+  bottom: 0;
+  transform: rotate(-90deg);
+}
+
+/* Portfolio */
+.portfolio {
+  /* Verwendet ein Grid-Layout mit drei Spalten für das Portfolio */
+  display: grid;
+  grid-template-areas: ". . .";
+  grid-gap: 50px;
+}
+
+.tile {
+  /* Setzt die Hintergrundfarbe und Mindesthöhe für Portfolio-Kacheln */
+  background-color: #5cbd8b;
+  min-height: 35vw;
+  border-radius: 15px;
+  border: 3px solid #5cbd8b;
+  outline: 2px solid #5cbd8b;
+  outline-offset: 8px;
+  transition: transform 0.3s ease;
+}
+
+.tile:hover {
+  /* Vergrößert die Kachel beim Hover */
+  transform: scale(1.05);
+}
+.tile2 {
+  /* Setzt die Hintergrundfarbe und Mindesthöhe für Portfolio-Kacheln */
+  background-color: #f8f8f8;
+  min-height: 35vw;
+  border-radius: 15px;
+  border: 3px solid #efefef;
+  outline: 2px solid #5cbd8b;
+  outline-offset: 8px;
+  transition: transform 0.3s ease;
+}
+
+.tile2:hover {
+  /* Vergrößert die Kachel beim Hover */
+  transform: scale(1.05);
+}
+
+.text {
+  /* Fügt Innenabstand für den Text innerhalb der Kacheln hinzu */
+  padding: 15px;
+  line-height: 1.4;
+  letter-spacing: 0.3px;
+  text-align: justify;
+}
+
+.pic img {
+  /* Stellt sicher, dass Bilder in den Kacheln die volle Breite einnehmen */
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+/* Responsives Video */
+.video-container {
+  /* Ermöglicht ein responsives Video durch Anpassung des Seitenverhältnisses */
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Seitenverhältnis */
+  padding-top: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed,
+.video-container video {
+  /* Positioniert das Video absolut, sodass es die gesamte Containerfläche einnimmt */
+  position: absolute;
+  top: 0;
+  left: 60; /* Muss vermutlich 60px sein */
+  width: 100%;
+  height: 100%;
+}
+
+.video-container + .video-container {
+  /* Fügt Abstand zwischen aufeinanderfolgenden Videos hinzu */
+  margin-top: 60px;
+}
+
+/* Mobile Styles */
+@media (max-width: 1280px) {
+  /* Anpassungen für Bildschirme unter 1280px Breite */
+
+  /* Gemeinsame Stile */
+  .wrapper > main,
+  #pg-nav {
+    /* Passt die Breite an, um Überlauf zu verhindern */
+    width: calc(100% - 60px);
+  }
+
+  /* Header */
+  #pg-nav > ul {
+    /* Passt das Grid-Layout für kleinere Bildschirme an */
+    grid-template-areas: ". . . .";
+    grid-gap: 5px;
+  }
+
+  /* Hauptbereich */
+  .portfolio {
+    /* Reduziert die Anzahl der Spalten im Portfolio auf zwei */
+    grid-template-areas: ". .";
+    grid-gap: 30px;
+  }
+
+  .tile {
+    /* Erhöht die Mindesthöhe der Kacheln */
+    min-height: 45vw;
+  }
+}
+
+@media (max-width: 850px) {
+  /* Anpassungen für Bildschirme unter 850px Breite */
+
+  /* Header */
+  .wrapper > header {
+    /* Fügt Innenabstand zum Header hinzu */
+    padding: 20px;
+  }
+
+  #hamburger {
+    /* Zeigt das Hamburger-Menü an */
+    display: flex;
+  }
+
+  #pg-nav {
+    /* Passt die Breite der Navigation an */
+    width: auto;
+  }
+
+  #pg-nav.active ul {
+    /* Zeigt die Navigationsliste an, wenn sie aktiv ist */
+    display: block;
+  }
+
+  #pg-nav ul {
+    /* Passt das Grid-Layout für die Navigation an und versteckt es */
+    display: grid;
+    grid-template-areas: ".";
+    grid-gap: 30px;
+    display: none;
+    z-index: 5;
+  }
+
+  .sub-list {
+    /* Ändert die Position der Unterlisten für mobile Geräte */
+    position: relative;
+  }
+
+  /* Hauptbereich */
+  .wrapper > main {
+    /* Passt die Breite des Hauptinhalts an */
+    width: calc(100% - 40px);
+  }
+
+  .portfolio {
+    /* Reduziert die Portfolio-Grid-Spalten auf eine */
+    grid-template-areas: ".";
+    grid-gap: 20px;
+  }
+
+  .tile {
+    /* Setzt die Mindesthöhe der Kacheln für mobile Geräte */
+    min-height: 100vw;
+  }
+}
+
+.wrapper > header h1,
+.wrapper > main h1,
+.wrapper > footer h1 {
+  /* Zentriert die Überschriften im Header, Main und Footer */
+  text-align: center;
+}
+
+.wrapper > header {
+  /* Fügt Abstand unter dem Header hinzu */
+  margin-bottom: 30px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.wrapper > footer {
+  /* Fügt Abstand über dem Footer hinzu und setzt den Innenabstand */
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.wrapper > header,
+.wrapper > footer {
+  /* Setzt die Hintergrundfarbe und Textfarbe für Header und Footer */
+  background-color: #5cbd8b;
+  color: #fafafa;
+}
+
+#pg-nav > ul li:hover {
+  /* Ändert die Hintergrundfarbe von Listenelementen in der Navigation beim Hover */
+  background-color: #20463d;
+  color: #ffffff;
+}
+
+#pg-nav > ul li a:hover {
+  /* Ändert die Textfarbe von Navigationslinks beim Hover */
+  color: #4f8195;
+}
+
+footer nav.Impressum {
+  /* Zentriert den Impressum-Text im Footer und setzt Schriftart und -größe */
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+footer nav.Impressum a {
+  /* Setzt die Textfarbe und entfernt die Unterstreichung für Links im Impressum */
+  color: #20463d;
+  text-decoration: none;
+}
+
+footer nav.Impressum a:hover {
+  /* Ändert die Textfarbe beim Hover im Impressum */
+  color: #0a1668;
+}
+
+/* Tabbed Links */
+.tab {
+  /* Versteckt den Überlauf und setzt einen Rahmen und Hintergrundfarbe für Tabs */
+  overflow: hidden;
+  border: 1px solid #0a1668;
+  background-color: #d3d3d3;
+}
+
+.tab button {
+  /* Stile für die Tab-Schaltflächen */
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+.tab button:hover {
+  /* Ändert die Hintergrundfarbe von Tab-Schaltflächen beim Hover */
+  background-color: #20463d;
+}
+
+.tab button.active {
+  /* Setzt die Hintergrundfarbe für aktive Tab-Schaltflächen */
+  background-color: #5cbd8b;
+}
+
+.tabcontent {
+  /* Versteckt den Inhalt der Tabs standardmäßig */
+  display: none;
+  min-height: 20vw;
+  padding: 6px 12px;
+  border: 1px solid #000000;
+  border-top: none;
+}
+
+.tabcontent.active {
+  /* Zeigt den Inhalt des aktiven Tabs an */
+  display: block;
+}
+
+#mapdiv {
+  /* Setzt die Höhe des Kartenbereichs */
+  height: 50vw;
+  position: relative;
+  z-index: 1;
+}
+
+/* SLIDER STYLES - für .meinSlider und .Slid images */
+.meinSlider {
+  position: relative;
+  margin: 20px;
+  width: 100%;
+  max-width: 100%;
+  height: 520px; /* bei Bedarf anpassen / responsive Höhe weiter unten */
+  overflow: hidden;
+  border-radius: 8px;
+  background: #111; /* falls Bilder langsamer laden */
+  outline: 2px solid #5cbd8b;
+  outline-offset: 8px;
+}
+
+/* verstecke die radio inputs, die in deinem HTML stehen */
+.meinSlider .mySlider input[type="radio"] {
+  display: none;
+}
+
+/* Bilder absolut positioniert, deckend */
+.meinSlider .Slid {
+  position: absolute;
+  inset: 0; /* top:0;right:0;bottom:0;left:0 */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 600ms ease;
+  z-index: 1;
+  pointer-events: none; /* Klicks durchlassen, wir navigieren per Buttons */
+  cursor: pointer;
+}
+
+.meinSlider video {
+  cursor: pointer;
+}
+
+/* sichtbares Bild */
+.meinSlider .Slid.active {
+  opacity: 1;
+  z-index: 2;
+  pointer-events: auto;
+}
+
+/* Pfeile (links/rechts) */
+.meinSlider .slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  padding: 10px 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  line-height: 1;
+  z-index: 3;
+}
+.meinSlider .slider-arrow:hover {
+  background: rgba(0, 0, 0, 0.55);
+  transform: translateY(-50%) scale(1.03);
+}
+
+.meinSlider .slider-arrow.left {
+  left: 14px;
+}
+.meinSlider .slider-arrow.right {
+  right: 14px;
+}
+
+/* Dots: unteres zentriertes Panel mit runden Buttons */
+.meinSlider .slider-dots {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 12px;
+  z-index: 4;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  pointer-events: auto;
+}
+
+.meinSlider .slider-dots button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.45);
+  cursor: pointer;
+  padding: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25) inset;
+}
+.meinSlider .slider-dots button:hover {
+  transform: scale(1.15);
+}
+.meinSlider .slider-dots button.active {
+  background: #ffffff;
+  transform: scale(1.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* kleine responsive Regeln */
+@media (max-width: 900px) {
+  .meinSlider {
+    height: 340px;
+  }
+}
+@media (max-width: 600px) {
+  .meinSlider {
+    height: 220px;
+  }
+  .meinSlider .slider-arrow {
+    padding: 8px;
+    font-size: 18px;
+  }
+  .meinSlider .slider-dots {
+    gap: 6px;
+    bottom: 8px;
+  }
+  .meinSlider .slider-dots button {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* Slider Dots verstecken für Slider mit no-dots Klasse */
+.meinSlider.no-dots .slider-dots {
+  display: none;
+}
+
+/*filmseite collage*/
+.film-project {
+  margin-bottom: 80px;
+}
+
+.collage-container {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 120px);
+
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.collage-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.collage-container img:nth-child(1) {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+}
+
+.collage-container img:nth-child(2) {
+  grid-column: 3 / 5;
+  grid-row: 1 / 2;
+}
+
+.collage-container img:nth-child(3) {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+
+.collage-container img:nth-child(4) {
+  grid-column: 4 / 5;
+  grid-row: 2 / 3;
+}
+
+.collage-container img:nth-child(5) {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+
+.collage-container img:nth-child(6) {
+  grid-column: 2 / 5;
+  grid-row: 3 / 4;
+}
+
+@media (max-width: 850px) {
+  .collage-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .collage-container img {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    height: 180px;
+  }
+}
+
+/* =========================
+   LIGHTBOX OVERLAY
+========================= */
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Bild im Fokus */
+.lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+/* Pfeile */
+.lightbox .prev,
+.lightbox .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.lightbox .prev {
+  left: 20px;
+}
+
+.lightbox .next {
+  right: 20px;
+}
+
+/* Close Button */
+.lightbox .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 35px;
+  color: white;
+  cursor: pointer;
+}
+.collage-container img {
+  transition:
+    filter 0.3s ease,
+    transform 0.3s ease;
+  cursor: pointer;
+}
+
+.collage-container img:hover {
+  filter: brightness(0.7);
+  transform: scale(1.02);
+}

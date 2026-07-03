@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Metadaten: Zeichensatz und Viewport-Einstellungen -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Einbinden von CSS-Dateien für das Design -->
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <title>Video</title>
+  </head>
+  <body>
+    <!-- Wrapper für den gesamten Inhalt -->
+    <div class="wrapper">
+      <!-- Header-Bereich -->
+      <header>
+        <!-- Hamburger-Menü, das beim Klicken die Navigation umschaltet -->
+        <div id="hamburger" onclick="toggleNav(this)">
+          <div class="hamburger-inner"></div>
+        </div>
+        <!-- Hauptnavigation -->
+        <nav id="pg-nav">
+          <ul>
+            <!-- Dropdown-Menü für Home mit Studium -->
+            <li class="dropdown">
+              <a href="../index.html">Home</a>
+              <ul class="sub-list">
+                <li><a href="./TabLinks.html">Studium</a></li>
+              </ul>
+            </li>
+            <li><a href="./Skills.html">Skills</a></li>
+            <!-- Dropdown-Menü für Projekte -->
+            <li class="dropdown">
+              <a href="./Projekte.html">Projekte</a>
+              <ul class="sub-list">
+                <li><a href="./Games.html">Games</a></li>
+                <li><a href="./Filme.html">Filme</a></li>
+              </ul>
+            </li>
+            <li><a href="./kontakte.html">Kontakte</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Hauptinhalt -->
+      <main>
+        <!-- Titel der Seite -->
+        <h1>Studium</h1>
+        <br />
+        <!-- Artikel-Element für den Inhalt der Tabs -->
+        <article>
+          <!-- Container für die Tab-Navigation -->
+          <div class="tab">
+            <!-- Tab-Knopf für Hochschule Harz, der beim Klicken den entsprechenden Inhalt öffnet -->
+            <button class="tablinks active" onclick="openTab(event, 'ms')">
+              Hochschule Harz
+            </button>
+            <!-- Tab-Knöpfe für die einzelnen Semester -->
+            <button class="tablinks" onclick="openTab(event, 'sem1')">
+              1. Semester
+            </button>
+            <button class="tablinks" onclick="openTab(event, 'sem2')">
+              2. Semester
+            </button>
+            <button class="tablinks" onclick="openTab(event, 'sem3')">
+              3. Semester
+            </button>
+            <button class="tablinks" onclick="openTab(event, 'sem4')">
+              4. Semester
+            </button>
+            <button class="tablinks" onclick="openTab(event, 'sem5')">
+              5. Semester
+            </button>
+            <button class="tablinks" onclick="openTab(event, 'sem6')">
+              6. Semester
+            </button>
+            <button class="tablinks" onclick="openTab(event, 'sem7')">
+              7. Semester
+            </button>
+            <button class="tablinks" onclick="openTab(event, 'sem8')">
+              8. Semester
+            </button>
+            <!-- Tab-Knopf für Freizeitaktivitäten/Arbeit -->
+            <button class="tablinks" onclick="openTab(event, 'nics')">
+              Arbeit und Arbeitserfahrung
+            </button>
+          </div>
+          <!-- Inhalt des Tabs "Hochschule Harz" -->
+          <div id="ms" class="tabcontent active">
+            <h3>Hochschule Harz</h3>
+            <p>
+              Ich habe mich an dieser Hochschule beworben, weil ich dort die
+              besten Chancen sehe, mich um meine Zukunft zu kümmern – und zwar
+              auf eine Weise, die mir Freude bereitet. Warum diese Hochschule
+              und keine andere? Ich habe in Brandenburg gelebt, bin dort zur
+              Schule gegangen und habe mein ganzes Leben dort verbracht. Durch
+              Zufall bin ich auf den Studiengang Game Design gestoßen und
+              dachte, dass das etwas für mich sein könnte. Allerdings handelte
+              es sich dabei um einen Masterstudiengang, weshalb ich mich für
+              Medieninformatik interessierte und mich schließlich dafür
+              eingeschrieben habe – auch, weil dieser Studiengang breit
+              gefächert ist und mir ermöglicht, vielfältige Fähigkeiten zu
+              entwickeln.
+            </p>
+            <p>
+              Der Campus der Hochschule Harz ist groß und verfügt über viele
+              verschiedene Gebäude für die jeweiligen Studiengänge. Die meiste
+              Zeit verbringe ich in Haus 9, wo der Medieninformatik-Bereich
+              untergebracht ist. Dort gibt es 3D-Labore mit Macs und
+              Windows-Rechnern, ein Filmstudio und weitere technische
+              Einrichtungen.
+            </p>
+            <p>Hochschule Harz</p>
+            <a rel="noopener" target="_blank" href="https://www.hs-harz.de/"
+              >hs-harz.de</a
+            >
+          </div>
+
+          <!-- Inhalt des Tabs "1. Semester" -->
+          <div id="sem1" class="tabcontent">
+            <h3>1. Semester</h3>
+            <p>
+              Im ersten Semester habe ich die Grundlagen der Medieninformatik
+              kennenlernt. Es war eine spannende Zeit, in der ich viele neue
+              Konzepte und Technologien entdeckt habe.
+            </p>
+            <p>
+              In diesen Zeitraum hatte ich verschiedene Veranstaltungen,
+              darunter die Folgenden: Einführung in die Informatik,
+              Programmierung 1, Mathematik 1, Mediengestaltung 1, Fototechnik,
+              Medieninformatik 1 und Audiotechnik. Und weitere kleinere Kurse.
+            </p>
+            <a href="../Strukturierung_Skizze.pdf" target="_blank">
+              Skizze zu meiner ersten Webseite
+            </a>
+            <br />
+            <br />
+            <a
+              href="../pdfs/Mottke_Leonard_mg1_Dokumentation.pdf"
+              target="_blank"
+            >
+              Mediengestaltung 1 Doku
+            </a>
+            <br />
+            <a href="../pdfs/Mottke_Leonard_mg1_plakat1.pdf" target="_blank">
+              Mediengestaltung 1 Plakat 1
+            </a>
+            <br />
+            <a href="../pdfs/Mottke_Leonard_mg1_plakat2_.pdf" target="_blank">
+              Mediengestaltung 1 Plakat 2
+            </a>
+            <br />
+            <a href="../pdfs/Mottke_Leonard_mg1_plakat3.pdf" target="_blank">
+              Mediengestaltung 1 Plakat 3
+            </a>
+            <br />
+            <br />
+            <a
+              href="../pdfs/m30904_Leonard_Mottke Audiotechnik.pdf"
+              target="_blank"
+            >
+              Audiotechnik Doku
+            </a>
+          </div>
+
+          <!-- Inhalt des Tabs "2. Semester" -->
+          <div id="sem2" class="tabcontent">
+            <h3>2. Semester</h3>
+            <p>
+              Im zweiten Semester vertieften sich meine Kenntnisse weiter. Ich
+              arbeitete an verschiedenen Projekten und entwickelte praktische
+              Fähigkeiten.
+            </p>
+            <p>
+              In diesem Zeitraum hatte ich verschiedene Veranstaltungen,
+              darunter die Folgenden: Programmierung 2, Mathematik und
+              Computergrafik, Mediengestaltung 2, Filmtechnik / Filmschnitt,
+              Medienenglich, Webprogrammierung und Design Interaktive
+              Oberflächen.
+            </p>
+            <a href="../Film_Pojekt2.pdf" target="_blank">
+              Tobi III Zweitsemester Film Drebuch
+            </a>
+            <br />
+            <br />
+            <a
+              href="../pdfs/m30906_Mottke_Leonard_Dokumentation.pdf"
+              target="_blank"
+            >
+              Mediengestaltung 2 Doku
+            </a>
+          </div>
+
+          <!-- Inhalt des Tabs "3. Semester" -->
+          <div id="sem3" class="tabcontent">
+            <h3>3. Semester</h3>
+            <p>
+              Das dritte Semester war geprägt von anspruchsvollen Projekten und
+              der Spezialisierung in verschiedenen Bereichen.
+            </p>
+            <p>
+              In diesem Zeitraum hatte ich verschiedene Veranstaltungen,
+              darunter die Folgenden: 3D-Modellierung für Film und Spiele,
+              Mediengestaltung 3, Programmierung 3, Softwartechnik und
+              Postproduktion.
+            </p>
+            <a
+              href="../pdfs/3D_Modellierung_m30904_Leonard_Mottke.pdf"
+              target="_blank"
+            >
+              3D-Modellierung Doku
+            </a>
+            <br />
+            <br />
+            <a href="../m30904_MottkeLeonard.pdf" target="_blank">
+              Mediengestaltung 3 Game Pitch
+            </a>
+            <br />
+            <br />
+            <a href="../pdfs/m30904_Doku.pdf" target="_blank">
+              Postproduktions Doku
+            </a>
+          </div>
+
+          <!-- Inhalt des Tabs "4. Semester" -->
+          <div id="sem4" class="tabcontent">
+            <h3>4. Semester</h3>
+            <p>
+              Im vierten Semester setzte ich mein Wissen in praktischen
+              Anwendungen um und arbeitete an innovativen Projekten.
+            </p>
+            <p>
+              In diesem Zeitraum hatte ich verschiedene Veranstaltungen,
+              darunter die Folgenden: Einführung in Game Engines, Programmierung
+              4, Softwarewerkzeuge, Mensch- und Computer-interaktion,
+              Projektmanagement und 3D-Animation für Filme und Spiele.
+            </p>
+            <a
+              href="../pdfs/Mottke_Leonard_m30904_Dokumentation_Prg4.pdf"
+              target="_blank"
+            >
+              Programmirung 4 Doku
+            </a>
+            <br />
+            <br />
+            <a href="../pdfs/GameEngines.pdf" target="_blank">
+              Game Engines Doku
+            </a>
+            <br />
+            <br />
+            <a
+              href="https://www.youtube.com/watch?v=d5OhrufnfT4"
+              class="project-link"
+            >
+              Der Fall 3D-Animation Video
+            </a>
+          </div>
+
+          <!-- Inhalt des Tabs "5. Semester" -->
+          <div id="sem5" class="tabcontent">
+            <h3>5. Semester</h3>
+            <p>
+              Das fünfte Semester habe ich bemerkt, dass ich mich in manschen
+              bereichen zu sehr überarbeitet hatte und mir ab da ein Plan machte
+              wie ich am besten die Projekte unterbringen konnte. Gleichzeitig
+              habe ich die Möglichkeit gehabt, an Projekten zu arbeiten, die
+              mich wirklich begeisterten, wie z.B.: im Storyboard bereich.
+            </p>
+            <p>
+              In diesem Zeitraum hatte ich verschiedene Veranstaltungen,
+              darunter die Folgenden: das Jahresprojekt mit Playing History,
+              Pitching / Präsentation, Softwareentwicklung, Wiederhollung
+              Programmirung 3, Datenbanksysteme und User Experience Design.
+            </p>
+            <a href="../pdfs/Dokumentation.pdf" target="_blank">
+              Programmirung 3 Doku
+            </a>
+            <br />
+            <a href="../pdfs/Benutzerhandbuch.pdf" target="_blank">
+              Programmirung 3 Handbuch
+            </a>
+            <br />
+          </div>
+
+          <!-- Inhalt des Tabs "6. Semester" -->
+          <div id="sem6" class="tabcontent">
+            <h3>6. Semester</h3>
+            <p>
+              Im sechsten Semester stand die Erstellung von einen Motion Capture
+              Projekt im Vordergrund. Wir haben als Team, ein Projekt
+              entwickelt, das die Möglichkeiten von Motion Capture nutzt, um
+              realistische Animationen zu erstellen. Der Film hat sehr viel Spaß
+              gemacht, aber auch viel Zeit gebraucht und ich habe dabei viel
+              über die Arbeit mit Motion Capture gelernt.
+            </p>
+            <p>
+              In diesem Zeitraum hatte ich verschiedene Veranstaltungen,
+              darunter die Folgenden: Ausgewählte Themen des Motion Capture,
+              Theoretische Informatik, Wissenschaftliches Arbeiten und
+              Wissenschaftliche Methodik, sowie weiterhin das Jahresprojekt mit
+              Playing History.
+            </p>
+            <a href="../pdfs/Referat_KI_Kunst.pdf" target="_blank">
+              Konzept für Abschlussarbeit
+            </a>
+            <br />
+            <br />
+            <a href="https://youtu.be/Qy6x_Pc7DpA" class="project-link">
+              Kopfsache Motion Capture Video
+            </a>
+          </div>
+
+          <!-- Inhalt des Tabs "7. Semester" -->
+          <div id="sem7" class="tabcontent">
+            <h3>7. Semester</h3>
+            <p>
+              Das siebente Semester bot die Möglichkeit, mich weiter zu
+              spezialisieren indem ich mich auf BFOs (Beruforientierung)
+              konzentrierte. Ab hier war mein Plan in den nächsten zwei
+              Semestern Veranstaltung nachzuholen und BFOs zu absolvieren. ich
+              habe es auch ruhiger angehen lassen und mir nicht den stress
+              gemacht wie in den voriegen Semster.
+            </p>
+            <p>
+              In diesem Zeitraum hatte ich verschiedene Veranstaltungen,
+              darunter die Folgenden: Requirements Engineering, Ausgewählte
+              Themen der Webprogrammierung und Portfolio / Showreel.
+            </p>
+            <a
+              href="../pdfs/Dokumentation_RE_Connect_Café_Gruppe3.pdf"
+              target="_blank"
+            >
+              Requirements Engineering Doku
+            </a>
+            <br />
+            <br />
+            <a
+              href="../pdfs/Mottke_Leonard_m30904_Dokumentation&KurzAnleitung_der_Ausgewälten_Themen_der_Webprogramirung.pdf"
+              target="_blank"
+            >
+              Ausgewählte Themen der Webprogrammierung Doku
+            </a>
+          </div>
+
+          <!-- Inhalt des Tabs "8. Semester" -->
+          <div id="sem8" class="tabcontent">
+            <h3>8. Semester</h3>
+            <p>
+              Im achten und aktuellen Semester arbeite ich an meinem finalen
+              Projekt und bereite meinen Abschluss vor. ich habe nur noch 3
+              Veranstaltungen die Bestanden werden müssen.
+            </p>
+            <p>
+              In diesem Zeitraum hatte ich verschiedene Veranstaltungen,
+              darunter die Folgenden: Visualisirung, Digitaler Dokumentarfilm
+              und Ausgewählte Themen des Game Design.
+            </p>
+          </div>
+          <!-- Inhalt des Tabs "Freizeitaktivitäten/Arbeit" -->
+          <div id="nics" class="tabcontent">
+            <h3>Arbeit und Arbeitserfahrung</h3>
+            <p>
+              Außerhalb des Studiums habe ich einen Minijob: Ich arbeite als
+              Einzelhandelskaufmann bei Edeka. Dadurch sammelte ich nicht nur
+              Erfahrung, sondern habe auch gelernt wie man mit den Kundinnen und
+              Kunden richtig Umgeht, das ist zwar manchmal eine Herausforderung,
+              kann aber auch zu tollen unterhaltungen führen.
+            </p>
+            <p>
+              Da ich schon in meiner Schulzeit verschidene Praktikas gemacht
+              gehabt, wodurch ich mich auch in verschidene Berufsfelder
+              umschauen konnte. Ich habe Praktikas in den Metalbau,
+              Landwirdschaft und Zahntechnik gemacht. Diese waren meist nicht
+              länger als ein Monat oder ein Halbes Jahr.
+            </p>
+            <p>
+              Ich habe daraus gelernt das ich mich wirklich etwas kreativer
+              ausleben möchte als nur körperliche arbeit. An manschen Tagen mag
+              ich es wirklich an sahen rumzubasteln oder wirklich auch an
+              maschinen rumzuscharuben aber am ende mag ich es wirklich sehr zu
+              Zeichnen, Skizziren, Designen, Modelieren und Animieren. Das ist
+              auch der Grund warum ich mich für den Studiengang Medieninformatik
+              entschieden habe.
+            </p>
+          </div>
+        </article>
+        <br />
+        <!-- Container für die Karte -->
+        <div id="mapdiv"></div>
+        <!-- .portfolio -->
+      </main>
+
+      <!-- Footer-Bereich mit Impressum und Datenschutz -->
+      <footer>
+        <nav class="Impressum">
+          <a>
+            &copy; 2026
+            <a href="impressum.html">Leonard Mottke || Impressum </a>
+            <a href="Datenschutz.html">|| Datenschutz</a>
+            <!-- Link zum Impressum -->
+          </a>
+        </nav>
+      </footer>
+    </div>
+    <!-- Ende des Wrappers -->
+
+    <!-- Lädt die JavaScript-Dateien am Ende, um die Ladezeiten zu verbessern -->
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/tablink.js"></script>
+    <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+    <script>
+      // Initialisiert die Karte von OpenLayers
+      map = new OpenLayers.Map("mapdiv");
+      // Fügt der Karte eine OpenStreetMap-Schicht hinzu
+      map.addLayer(new OpenLayers.Layer.OSM());
+
+      // Definiert die Position für den Marker (Längengrad, Breitengrad) und transformiert sie
+      var lonLat = new OpenLayers.LonLat(10.75950444, 51.82731744).transform(
+        new OpenLayers.Projection("EPSG:4326"), // Transformation aus dem Koordinatensystem WGS 1984
+        map.getProjectionObject(), // in das Koordinatensystem 'Spherical Mercator Projection'
+      );
+
+      var zoom = 17; // Zoomstufe der Karte
+
+      // Erstellt eine Layer für Marker
+      var markers = new OpenLayers.Layer.Markers("Markers");
+      map.addLayer(markers);
+
+      // Fügt einen Marker zur Karte hinzu
+      markers.addMarker(new OpenLayers.Marker(lonLat));
+
+      // Setzt das Zentrum und den Zoom der Karte
+      map.setCenter(lonLat, zoom);
+    </script>
+  </body>
+</html>

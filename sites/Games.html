@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Metadaten: Zeichensatz und Viewport-Einstellungen -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Einbinden von CSS-Dateien für das Design -->
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <title>Games</title>
+  </head>
+  <body>
+    <!-- Wrapper für den gesamten Inhalt -->
+    <div class="wrapper">
+      <!-- Header-Bereich -->
+      <header>
+        <!-- Hamburger-Menü, das beim Klicken die Navigation umschaltet -->
+        <div id="hamburger" onclick="toggleNav(this)">
+          <div class="hamburger-inner"></div>
+        </div>
+        <!-- Hauptnavigation -->
+        <nav id="pg-nav">
+          <ul>
+            <!-- Dropdown-Menü für Home mit Studium -->
+            <li class="dropdown">
+              <a href="../index.html">Home</a>
+              <ul class="sub-list">
+                <li><a href="./TabLinks.html">Studium</a></li>
+              </ul>
+            </li>
+            <li><a href="./Skills.html">Skills</a></li>
+            <!-- Dropdown-Menü für Projekte -->
+            <li class="dropdown">
+              <a href="./Projekte.html">Projekte</a>
+              <ul class="sub-list">
+                <li><a href="./Games.html">Games</a></li>
+                <li><a href="./Filme.html">Filme</a></li>
+              </ul>
+            </li>
+            <li><a href="./kontakte.html">Kontakte</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Hauptinhalt -->
+      <main>
+        <div class="pic">
+          <div class="slidshow">
+            <br />
+
+            <!-- Slider: .meinSlider wird vom slider.js verwendet -->
+            <section class="meinSlider">
+              <img
+                class="Slid"
+                src="../images/Playdate_LastLine.png"
+                title="Playdate1"
+              />
+              <img
+                class="Slid"
+                src="../images/LastLineanfang.png"
+                title="Playdate2"
+              />
+              <img
+                class="Slid"
+                src="../images/lastLineingame1.png"
+                title="Playdate3"
+              />
+              <img class="Slid" src="../images/Raumschiffe2.png" title="Game" />
+              <img
+                class="Slid"
+                src="../images/Space_Doge-ingame1.png"
+                title="Game1"
+              />
+              <img
+                class="Slid"
+                src="../images/Space_Doge-ingame2.png"
+                title="Game2"
+              />
+            </section>
+            <br />
+          </div>
+        </div>
+
+        <!-- Titel der Seite -->
+        <h1>Games</h1>
+        <br />
+        <!-- Abschnitt für die Portfolio-Galerie -->
+        <section class="portfolio">
+          <!-- Ein Projekt-Element -->
+          <div class="tile">
+            <!-- Bild des Projekts -->
+            <div class="collage-container">
+              <img src="../images/lastLineingame1.png" alt="" />
+              <img src="../images/LastLineanfang.png" alt="" />
+              <img src="../images/Playdate_Lastline-ingame1.png" alt="" />
+              <img src="../images/playdate_LastLine-ingame2.png" alt="" />
+              <img src="../images/Playdate_LastLine.png" alt="" />
+              <img src="../images/blender-herz-lastLine.png" alt="" />
+            </div>
+            <!-- Beschreibung des Projekts -->
+            <div class="text">
+              <h2>LastLine Playdate</h2>
+              <p>
+                Im 8 Semester entwickelten wir ein Spiel für die
+                Playdate-Konsole. Das Spiel ist ein Punching Game, bei dem der
+                Spieler Gegner schlagen oder zurück katapultiren muss, um
+                voranzukommen. Die Steuerung erfolgt über die Knöpfe der
+                Konsole.
+              </p>
+              <p></p>
+            </div>
+          </div>
+
+          <!-- Ein weiteres Projekt-Element -->
+          <div class="tile">
+            <!-- Bild des Projekts -->
+            <div class="collage-container">
+              <img src="../images/Space_Doge-Hauptmenue.png" alt="" />
+              <img src="../images/Space_Doge-ingame1.png" alt="" />
+              <img src="../images/Space_Doge-ingame2.png" alt="" />
+              <img src="../images/Space_Doge-Modelassets.png" alt="" />
+              <img src="../images/Space_Doge-pauseMeneu.png" alt="" />
+              <img src="../images/Space_Doge-musikslider.png" alt="" />
+            </div>
+            <!-- Beschreibung des Projekts -->
+            <div class="text">
+              <h2>Game Engines</h2>
+              <p>
+                Im vierten Semester sollten wir ein Spiel programmieren. Ich
+                habe mich entschieden, ein Arcade-Spiel zu entwickeln, bei dem
+                es darum geht, den Schüssen eines größeren Raumschiffs
+                auszuweichen. Die Modelle für die Raumschiffe hatte ich bereits
+                vor der Aufgabenstellung modelliert und konnte sie dann im Spiel
+                verwenden. Das Spiel wurde mit der Game Engine Unity entwickelt.
+              </p>
+              <p></p>
+            </div>
+          </div>
+
+          <!-- Ein weiteres Projekt-Element -->
+          <div class="tile">
+            <!-- Bild des Projekts -->
+            <div class="collage-container">
+              <img src="../images/Space_City.png" alt="" />
+              <img src="../images/Fall.png" alt="" />
+              <img src="../images/Youtupe.jpg" alt="" />
+              <img src="../images/Webtoon.png" alt="" />
+              <img src="../images/Blender_Frida.png" alt="" />
+              <img src="../images/3dAnimation6.png" alt="" />
+            </div>
+            <!-- Beschreibung des Projekts -->
+            <div class="text">
+              <h2>Traum Projekt Space City</h2>
+              <p>
+                Im dritten Semester erhielten wir die Aufgabe, einen Game Pitch
+                zu erstellen. Mir ist das Projekt Space City sehr ans Herz
+                gewachsen und ich habe mir die aufgabe angenommen irgendwann ein
+                Vollständiges Game darraus zu machen. Es handelt sich um ein
+                Spiel, in dem der Spieler eine Stadt auf einem fremden Planeten
+                helfen muss. Dabei muss er Ressourcen sammeln, Gebäude errichten
+                und die Stadt vor Gefahren schützen.
+              </p>
+              <p></p>
+              <p>Hier ist der Link zum Game Pitch:</p>
+              <!-- Link zum Game Pitch -->
+              <a href="../m30904_MottkeLeonard.pdf" target="_blank">
+                Game Pitch: Space City
+              </a>
+            </div>
+          </div>
+        </section>
+        <br />
+        <!-- Ende des Abschnitts .portfolio -->
+      </main>
+
+      <!-- Footer-Bereich mit Impressum und Datenschutz -->
+      <footer>
+        <nav class="Impressum">
+          <a>
+            &copy; 2026
+            <a href="impressum.html">Leonard Mottke || Impressum </a>
+            <a href="Datenschutz.html">|| Datenschutz</a>
+            <!-- Link zum Impressum -->
+          </a>
+        </nav>
+      </footer>
+    </div>
+    <!-- Ende des Wrappers -->
+
+    <!-- Lädt die JavaScript-Dateien am Ende, um die Ladezeiten zu verbessern -->
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/slider.js"></script>
+  </body>
+</html>

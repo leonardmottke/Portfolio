@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Metadaten: Zeichensatz und Viewport-Einstellungen -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Einbinden von CSS-Dateien für das Design -->
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <title>Video</title>
+  </head>
+  <body>
+    <!-- Wrapper für den gesamten Inhalt -->
+    <div class="wrapper">
+      <!-- Header-Bereich -->
+      <header>
+        <!-- Hamburger-Menü, das beim Klicken die Navigation umschaltet -->
+        <div id="hamburger" onclick="toggleNav(this)">
+          <div class="hamburger-inner"></div>
+        </div>
+        <!-- Hauptnavigation -->
+        <nav id="pg-nav">
+          <ul>
+            <!-- Dropdown-Menü für Home mit Studium -->
+            <li class="dropdown">
+              <a href="../index.html">Home</a>
+              <ul class="sub-list">
+                <li><a href="./TabLinks.html">Studium</a></li>
+              </ul>
+            </li>
+            <li><a href="./Skills.html">Skills</a></li>
+            <!-- Dropdown-Menü für Projekte -->
+            <li class="dropdown">
+              <a href="./Projekte.html">Projekte</a>
+              <ul class="sub-list">
+                <li><a href="./Games.html">Games</a></li>
+                <li><a href="./Filme.html">Filme</a></li>
+              </ul>
+            </li>
+            <li><a href="./kontakte.html">Kontakte</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Hauptinhalt -->
+      <main>
+        <div class="pic">
+          <div class="slidshow">
+            <br />
+
+            <!-- Slider: .meinSlider wird vom slider.js verwendet -->
+            <section class="meinSlider no-dots">
+              <!-- Slide 1 -->
+              <div class="Slid">
+                <video
+                  playsinline
+                  preload="metadata"
+                  controls
+                  poster="../images/Space_City.png"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: block;
+                  "
+                >
+                  <source src="../videos/GamePitch.mp4" type="video/mp4" />
+                </video>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="Slid">
+                <video
+                  playsinline
+                  preload="metadata"
+                  controls
+                  poster="../images/Raumschiffe2.png"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: block;
+                  "
+                >
+                  <source src="../videos/SpaceDodge.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </section>
+            <br />
+          </div>
+        </div>
+
+        <!-- Titel der Seite -->
+        <h1>Projekte</h1>
+        <br />
+        <!-- Abschnitt für die Portfolio-Galerie -->
+        <section class="portfolio">
+          <!-- Ein Projekt-Element -->
+          <div class="tile">
+            <!-- Bild des Projekts -->
+            <div class="pic">
+              <img alt="Bild" src="../images/end1.png" />
+            </div>
+            <!-- Beschreibung des Projekts -->
+            <div class="text">
+              <h2>3D Modellierung</h2>
+              <p>
+                Im dritten Semester hatten wir die Veranstaltung
+                „3D-Modellierung für Film und Spiele“. Dort bekamen wir die
+                Aufgabe, ein alltägliches Erlebnis zu modellieren. Ich habe mich
+                entschieden, ein Zimmer zu gestalten, das einen futuristischen
+                Touch hat.
+              </p>
+              <p></p>
+            </div>
+          </div>
+
+          <!-- Ein weiteres Projekt-Element -->
+          <div class="tile">
+            <!-- Bild des Projekts -->
+            <div class="pic">
+              <img alt="Bild" src="../images/Raumschiffe2.png" />
+            </div>
+            <!-- Beschreibung des Projekts -->
+            <div class="text">
+              <h2>Game Engines</h2>
+              <p>
+                Im vierten Semester sollten wir ein Spiel programmieren. Ich
+                habe mich entschieden, ein Arcade-Spiel zu entwickeln, bei dem
+                es darum geht, den Schüssen eines größeren Raumschiffs
+                auszuweichen. Die Modelle für die Raumschiffe hatte ich bereits
+                vor der Aufgabenstellung modelliert und konnte sie dann im Spiel
+                verwenden.
+              </p>
+              <p></p>
+            </div>
+          </div>
+
+          <!-- Ein weiteres Projekt-Element -->
+          <div class="tile">
+            <!-- Bild des Projekts -->
+            <div class="pic">
+              <img alt="Bild" src="../images/Space_City.png" />
+            </div>
+            <!-- Beschreibung des Projekts -->
+            <div class="text">
+              <h2>Mediengestaltung 3</h2>
+              <p>
+                Auch im dritten Semester erhielten wir die Aufgabe, einen Game
+                Pitch zu erstellen.
+              </p>
+              <p></p>
+              <p>Hier ist der Link zum Game Pitch:</p>
+              <!-- Link zum Game Pitch -->
+              <a href="../m30904_MottkeLeonard.pdf" target="_blank">
+                Game Pitch: Space City
+              </a>
+            </div>
+          </div>
+        </section>
+        <br />
+        <!-- Ende des Abschnitts .portfolio -->
+      </main>
+
+      <!-- Footer-Bereich mit Impressum und Datenschutz -->
+      <footer>
+        <nav class="Impressum">
+          <a>
+            &copy; 2026
+            <a href="impressum.html">Leonard Mottke || Impressum </a>
+            <a href="Datenschutz.html">|| Datenschutz</a>
+            <!-- Link zum Impressum -->
+          </a>
+        </nav>
+      </footer>
+    </div>
+    <!-- Ende des Wrappers -->
+
+    <!-- Lädt die JavaScript-Dateien am Ende, um die Ladezeiten zu verbessern -->
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/slider.js"></script>
+  </body>
+</html>

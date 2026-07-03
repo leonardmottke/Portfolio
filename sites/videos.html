@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Metadaten: Zeichensatz und Viewport-Einstellungen -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Einbinden von CSS-Dateien für das Design -->
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <title>Video</title>
+  </head>
+  <body>
+    <!-- Wrapper für den gesamten Inhalt -->
+    <div class="wrapper">
+      <!-- Header-Bereich -->
+      <header>
+        <!-- Hamburger-Menü, das beim Klicken die Navigation umschaltet -->
+        <div id="hamburger" onclick="toggleNav(this)">
+          <div class="hamburger-inner"></div>
+        </div>
+        <!-- Hauptnavigation -->
+        <nav id="pg-nav">
+          <ul>
+            <!-- Dropdown-Menü für Home mit Studium -->
+            <li class="dropdown">
+              <a href="../index.html">Home</a>
+              <ul class="sub-list">
+                <li><a href="./TabLinks.html">Studium</a></li>
+              </ul>
+            </li>
+            <li><a href="./Skills.html">Skills</a></li>
+            <!-- Dropdown-Menü für Projekte -->
+            <li class="dropdown">
+              <a href="./Projekte.html">Projekte</a>
+              <ul class="sub-list">
+                <li><a href="./Games.html">Games</a></li>
+                <li><a href="./Filme.html">Filme</a></li>
+              </ul>
+            </li>
+            <li><a href="./kontakte.html">Kontakte</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Hauptinhalt -->
+      <main>
+        <!-- Titel des Films -->
+        <h1>Semester Zwei Film Tobi</h1>
+        <br />
+        <!-- Artikel-Element für den Film -->
+        <article>
+          <!-- Container für das Video -->
+          <div class="video-container">
+            <!-- Video-Element mit Steuerungselementen -->
+            <video
+              width="320"
+              height="240"
+              controls
+              poster="../images/VideoTHm.png"
+            >
+              <!-- Quelle des Videos -->
+              <source
+                src="../videos/Leonard_Tobi3_endfilm.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+          <div class="text">
+            <h2>Der Film Tobi</h2>
+            <!-- Textinhalt über die Person -->
+            <p>
+              Im zweiten Semester bekamen wir die Aufgabe, einen Film zu drehen.
+              Zuerst wurde ein Konzept erstellt, dann das Drehbuch geschrieben
+              und ein Storyboard angefertigt.
+            </p>
+            <p>
+              Die Geschichte handelt von Tobi, der an unterschiedlichen Orten
+              aufwacht, an denen immer eine komische Person ist. Diese Person
+              hat böse Absichten, und Tobi versucht zunächst zu fliehen – was
+              ihm jedoch nicht gelingt.
+            </p>
+          </div>
+        </article>
+        <!-- Ende des Artikels -->
+      </main>
+
+      <!-- Footer-Bereich mit Impressum und Datenschutz -->
+      <footer>
+        <nav class="Impressum">
+          <a>
+            &copy; 2026
+            <a href="impressum.html">Leonard Mottke || Impressum</a>
+            <a href="Datenschutz.html">|| Datenschutz</a>
+            <!-- Link zum Impressum -->
+          </a>
+        </nav>
+      </footer>
+    </div>
+    <!-- Ende des Wrappers -->
+
+    <!-- Lädt die JavaScript-Dateien am Ende, um die Ladezeiten zu verbessern -->
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>

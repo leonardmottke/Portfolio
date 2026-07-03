@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Zeichensatz und Viewport-Einstellungen für die Responsivität der Webseite -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Einbinden von CSS-Dateien für das Design der Webseite -->
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <title>Video</title>
+  </head>
+  <body>
+    <!-- Wrapper für den gesamten Inhalt der Seite -->
+    <div class="wrapper">
+      <!-- Header-Bereich der Seite -->
+      <header>
+        <!-- Hamburger-Menü für die mobile Navigation -->
+        <div id="hamburger" onclick="toggleNav(this)">
+          <div class="hamburger-inner"></div>
+        </div>
+        <!-- Navigation mit Links zu den verschiedenen Seiten -->
+        <nav id="pg-nav">
+          <ul>
+            <!-- Dropdown-Menü für Home mit Studium -->
+            <li class="dropdown">
+              <a href="../index.html">Home</a>
+              <ul class="sub-list">
+                <li><a href="./TabLinks.html">Studium</a></li>
+              </ul>
+            </li>
+            <li><a href="./Skills.html">Skills</a></li>
+            <!-- Dropdown-Menü für Projekte -->
+            <li class="dropdown">
+              <a href="./Projekte.html">Projekte</a>
+              <ul class="sub-list">
+                <li><a href="./Games.html">Games</a></li>
+                <li><a href="./Filme.html">Filme</a></li>
+              </ul>
+            </li>
+            <li><a href="./kontakte.html">Kontakte</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Hauptinhalt der Seite -->
+      <main>
+        <!-- Überschrift für den Bereich Animationen -->
+        <h1>Animationen</h1>
+        <br />
+        <article>
+          <!-- Container für das erste Video -->
+          <div class="video-container">
+            <video
+              width="320"
+              height="240"
+              controls
+              poster="../images/obenAnimaton.png"
+            >
+              <source src="../videos/Kerbus_vs_Akon.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="text">
+            <h2>Postproduktion</h2>
+            <!-- Textinhalt über die Person -->
+            <p>
+              Dies hier ist die Abgabe für die Postproduktion, die ich im 3.
+              Semester erstellt habe. Sie bildet außerdem eine Grundlage für
+              meinen Game Pitch und den Web-Comic. Die Erstellung der
+              Materialien – also der Zeichnungen – und deren Umsetzung in eine
+              Animation dauerte etwa zwei Monate.
+            </p>
+            <p>
+              Die Geschichte handelt von zwei Kriegern, die sich
+              gegenüberstehen. Kerbus mit den roten Augen hat einen bewohnten
+              Planeten zerstört. Akon will ihn nun aufhalten, damit Kerbus keine
+              weiteren Planeten zerstören kann. Wird es ihm gelingen? Wer weiß…
+            </p>
+          </div>
+
+          <!-- Container für das zweite Video -->
+          <div class="video-container">
+            <video
+              width="320"
+              height="240"
+              controls
+              poster="../images/Fall.png"
+            >
+              <source src="../videos/Test1.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          <div class="text">
+            <h2>3D-Animation</h2>
+            <!-- Textinhalt über die Person -->
+            <p>
+              Ein Semester später, also im 4. Semester, habe ich eine weitere
+              Animation erstellt. Diese wurde mit der 3D-Software Blender
+              gemacht. Die 3D-Modelle wurden von mir selbst modelliert und
+              geriggt.
+            </p>
+            <p>
+              In der Animation geht es um zwei Personen, genauer gesagt
+              Yolanerinnen. Die jüngere heißt Lisa, die ältere Maria. Sie sind
+              auf einer Wiese unterwegs, als ein riesiger Feuerball auftaucht:
+              Ein Meteorit stürzt auf den Planeten. Werden sie überleben…?
+            </p>
+          </div>
+        </article>
+
+        <!-- Hier könnten weitere Inhalte oder Sektionen hinzugefügt werden -->
+        <!-- .portfolio -->
+      </main>
+
+      <!-- Footer-Bereich der Seite -->
+      <footer>
+        <nav class="Impressum">
+          <a>
+            &copy; 2026
+            <!-- Links zum Impressum und Datenschutz -->
+            <a href="impressum.html">Leonard Mottke || Impressum </a>
+            <a href="Datenschutz.html">|| Datenschutz</a>
+            <!-- Link zum Impressum und Datenschutz -->
+          </a>
+        </nav>
+      </footer>
+    </div>
+    <!-- Ende des Wrappers -->
+
+    <!-- JavaScript-Dateien am Ende laden, um die Ladezeiten der Seite zu verbessern -->
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>

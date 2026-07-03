@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Metadaten: Zeichensatz und Viewport-Einstellungen -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Einbinden von CSS-Dateien für das Design -->
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <title>Video</title>
+  </head>
+  <body>
+    <!-- Wrapper für den gesamten Inhalt -->
+    <div class="wrapper">
+      <!-- Header-Bereich -->
+      <header>
+        <!-- Hamburger-Menü, das beim Klicken die Navigation umschaltet -->
+        <div id="hamburger" onclick="toggleNav(this)">
+          <div class="hamburger-inner"></div>
+        </div>
+        <!-- Hauptnavigation -->
+        <nav id="pg-nav">
+          <ul>
+            <!-- Dropdown-Menü für Home mit Studium -->
+            <li class="dropdown">
+              <a href="../index.html">Home</a>
+              <ul class="sub-list">
+                <li><a href="./TabLinks.html">Studium</a></li>
+              </ul>
+            </li>
+            <li><a href="./Skills.html">Skills</a></li>
+            <!-- Dropdown-Menü für Projekte -->
+            <li class="dropdown">
+              <a href="./Projekte.html">Projekte</a>
+              <ul class="sub-list">
+                <li><a href="./Games.html">Games</a></li>
+                <li><a href="./Filme.html">Filme</a></li>
+              </ul>
+            </li>
+            <li><a href="./kontakte.html">Kontakte</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Hauptinhalt -->
+      <main>
+        <!-- Titel der Seite -->
+        <h1>Kontakt</h1>
+        <br />
+        <!-- Abschnitt für Kontaktinformationen -->
+        <section class="portfolio">
+          <!-- Kontaktinformationen -->
+          <div class="tile">
+            <div class="text">
+              <h2>Kontakt</h2>
+              <p>Leonard Mottke</p>
+              <p>Tel: 015233814744</p>
+              <p>E-mail:</p>
+              <p>
+                <a href="mailto:leonard.mottke@outlook.com">
+                  leonard.mottke@outlook.com
+                </a>
+              </p>
+            </div>
+          </div>
+          <!-- Bild im Kontaktbereich -->
+          <div class="pic">
+            <img alt="Bild" src="../images/Titelloses 98.png" />
+          </div>
+        </section>
+        <!-- Ende des Abschnitts .portfolio -->
+      </main>
+
+      <!-- Footer-Bereich mit Impressum und Datenschutz -->
+      <footer>
+        <nav class="Impressum">
+          <a>
+            &copy; 2026
+            <a href="./impressum.html">Leonard Mottke || Impressum </a>
+            <a href="Datenschutz.html">|| Datenschutz</a>
+            <!-- Link zum Impressum -->
+          </a>
+        </nav>
+      </footer>
+    </div>
+    <!-- Ende des Wrappers -->
+
+    <!-- Lädt die JavaScript-Dateien am Ende, um die Ladezeiten zu verbessern -->
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>
