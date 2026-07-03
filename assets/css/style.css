@@ -416,6 +416,11 @@ footer nav.Impressum a:hover {
   z-index: 1;
 }
 
+.slidshow {
+  display: flex;
+  justify-content: center;
+}
+
 /* SLIDER STYLES - für .meinSlider und .Slid images */
 .meinSlider {
   position: relative;
@@ -433,11 +438,6 @@ footer nav.Impressum a:hover {
 /* verstecke die radio inputs, die in deinem HTML stehen */
 .meinSlider .mySlider input[type="radio"] {
   display: none;
-}
-
-.slidshow {
-  display: flex;
-  justify-content: center;
 }
 
 /* Bilder absolut positioniert, deckend */
