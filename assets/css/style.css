@@ -35,6 +35,7 @@ p:last-child {
 }
 
 #pg-nav > ul,
+.sub-list,
 .sub-list ul {
   /* Entfernt die Standard-Aufzählungspunkte bei Listen */
   list-style: none;
