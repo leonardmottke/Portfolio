@@ -7,6 +7,67 @@ function toggleNav(elem) {
   elem.nextElementSibling.classList.toggle("active");
 }
 
+// Mobile Dropdown-Funktionalität
+document.addEventListener("DOMContentLoaded", () => {
+  const dropdownLinks = document.querySelectorAll(".dropdown > a");
+  
+  dropdownLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      // Nur auf Mobile (max-width: 850px)
+      if (window.innerWidth <= 850) {
+        const dropdown = link.parentElement;
+        
+        // Wenn Dropdown bereits offen, lass die Navigation zu
+        if (dropdown.classList.contains("active")) {
+          // Dropdown ist offen, navigiere normal
+          return;
+        }
+        
+        // Wenn Dropdown geschlossen, öffne es und verhindere Navigation
+        e.preventDefault();
+        e.stopPropagation();
+        dropdown.classList.add("active");
+      }
+    });
+  });
+
+  // Sub-Links (innerhalb des Dropdowns) navigieren normal
+  const subLinks = document.querySelectorAll(".sub-list a");
+  subLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      // Normale Navigation, kein preventDefault
+      if (window.innerWidth <= 850) {
+        // Optional: Alle Dropdowns schließen nach Klick auf Sub-Link
+        document.querySelectorAll(".dropdown.active").forEach((dropdown) => {
+          dropdown.classList.remove("active");
+        });
+      }
+    });
+  });
+
+  // Fenster-Resize-Event, um Hover-Verhalten zurückzusetzen
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 850) {
+      // Desktop-Ansicht: alle active-Klassen entfernen
+      document.querySelectorAll(".dropdown.active").forEach((dropdown) => {
+        dropdown.classList.remove("active");
+      });
+    }
+  });
+
+  // Schließe Dropdowns, wenn man außerhalb klickt (nur Mobile)
+  document.addEventListener("click", (e) => {
+    if (window.innerWidth <= 850) {
+      const dropdowns = document.querySelectorAll(".dropdown.active");
+      dropdowns.forEach((dropdown) => {
+        if (!dropdown.contains(e.target)) {
+          dropdown.classList.remove("active");
+        }
+      });
+    }
+  });
+});
+
 let currentGallery = [];
 let currentIndex = 0;
 

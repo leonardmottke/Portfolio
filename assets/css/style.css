@@ -78,9 +78,40 @@ p:last-child {
   z-index: 100;
 }
 
-.dropdown:hover > .sub-list {
-  /* Zeigt die Unterliste an, wenn das Dropdown-Menü angeklickt wird */
-  display: block;
+/* Desktop: Hover zeigt Dropdown */
+@media (min-width: 851px) {
+  .dropdown:hover > .sub-list {
+    /* Zeigt die Unterliste an, wenn das Dropdown-Menü angeklickt wird */
+    display: block;
+  }
+}
+
+/* Mobile: Click zeigt Dropdown */
+@media (max-width: 850px) {
+  .dropdown > a::after {
+    /* Pfeil rechts neben dem Text */
+    content: " ▶";
+    font-size: 0.8em;
+    transition: transform 0.3s ease;
+  }
+
+  .dropdown.active > a::after {
+    /* Pfeil dreht sich, wenn Dropdown offen ist */
+    transform: rotate(90deg);
+  }
+
+  .dropdown > .sub-list {
+    /* Versteckt Dropdown auf Mobile standardmäßig */
+    display: none !important;
+    position: relative;
+    margin-top: 0;
+  }
+
+  .dropdown.active > .sub-list {
+    /* Zeigt die Unterliste an, wenn aktiv */
+    display: block !important;
+    background-color: #8a8a8a;
+  }
 }
 
 /* Hamburger-Menü aus Tut 9 SEM 1 */
@@ -160,10 +191,6 @@ p:last-child {
   transition: transform 0.3s ease;
 }
 
-.tile:hover {
-  /* Vergrößert die Kachel beim Hover */
-  transform: scale(1.05);
-}
 .tile2 {
   /* Setzt die Hintergrundfarbe und Mindesthöhe für Portfolio-Kacheln */
   background-color: #f8f8f8;
@@ -175,9 +202,17 @@ p:last-child {
   transition: transform 0.3s ease;
 }
 
-.tile2:hover {
-  /* Vergrößert die Kachel beim Hover */
-  transform: scale(1.05);
+/* Hover-Effekte nur auf Desktop */
+@media (min-width: 851px) {
+  .tile:hover {
+    /* Vergrößert die Kachel beim Hover */
+    transform: scale(1.05);
+  }
+
+  .tile2:hover {
+    /* Vergrößert die Kachel beim Hover */
+    transform: scale(1.05);
+  }
 }
 
 .text {
@@ -289,6 +324,7 @@ p:last-child {
   .sub-list {
     /* Ändert die Position der Unterlisten für mobile Geräte */
     position: relative;
+    margin-top: 0;
   }
 
   /* Hauptbereich */
