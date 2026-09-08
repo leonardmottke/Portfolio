@@ -10,19 +10,19 @@ function toggleNav(elem) {
 // Mobile Dropdown-Funktionalität
 document.addEventListener("DOMContentLoaded", () => {
   const dropdownLinks = document.querySelectorAll(".dropdown > a");
-  
+
   dropdownLinks.forEach((link) => {
     link.addEventListener("click", (e) => {
       // Nur auf Mobile (max-width: 850px)
       if (window.innerWidth <= 850) {
         const dropdown = link.parentElement;
-        
+
         // Wenn Dropdown bereits offen, lass die Navigation zu
         if (dropdown.classList.contains("active")) {
           // Dropdown ist offen, navigiere normal
           return;
         }
-        
+
         // Wenn Dropdown geschlossen, öffne es und verhindere Navigation
         e.preventDefault();
         e.stopPropagation();
@@ -34,10 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // Sub-Links (innerhalb des Dropdowns) navigieren normal
   const subLinks = document.querySelectorAll(".sub-list a");
   subLinks.forEach((link) => {
-    link.addEventListener("click", (e) => {
-      // Normale Navigation, kein preventDefault
+    link.addEventListener("click", () => {
       if (window.innerWidth <= 850) {
-        // Optional: Alle Dropdowns schließen nach Klick auf Sub-Link
         document.querySelectorAll(".dropdown.active").forEach((dropdown) => {
           dropdown.classList.remove("active");
         });
@@ -48,7 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // Fenster-Resize-Event, um Hover-Verhalten zurückzusetzen
   window.addEventListener("resize", () => {
     if (window.innerWidth > 850) {
-      // Desktop-Ansicht: alle active-Klassen entfernen
       document.querySelectorAll(".dropdown.active").forEach((dropdown) => {
         dropdown.classList.remove("active");
       });
@@ -64,6 +61,17 @@ document.addEventListener("DOMContentLoaded", () => {
           dropdown.classList.remove("active");
         }
       });
+    }
+  });
+
+  // Lazy Loading für vorhandene Bilder im aktuellen Ordner
+  document.querySelectorAll("img").forEach((img, index) => {
+    if (!img.hasAttribute("loading")) {
+      img.loading = index < 3 ? "eager" : "lazy";
+    }
+
+    if (!img.hasAttribute("decoding")) {
+      img.decoding = "async";
     }
   });
 });

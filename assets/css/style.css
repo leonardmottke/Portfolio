@@ -223,6 +223,11 @@ p:last-child {
   text-align: justify;
 }
 
+img {
+  /* Optimierung für schnellere Darstellung im Browser */
+  content-visibility: auto;
+}
+
 .pic img {
   /* Stellt sicher, dass Bilder in den Kacheln die volle Breite einnehmen */
   width: 100%;
